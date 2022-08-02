@@ -7,8 +7,8 @@ function ArticleTeaser(props) {
     let mealID = detail[1]
     return(
         <Col xs lg="3">
-            <img src={dish.image}  width= '200' height= '200' ></img>
-            <Link to={`/Meals/${mealID}`} >{dish.label} </Link>
+            
+            <Link to={`/Meals/${mealID}`} ><img src={dish.image}  width= '200' height= '200' ></img><p>{dish.label}</p> </Link>
         </Col>
     )
 }
