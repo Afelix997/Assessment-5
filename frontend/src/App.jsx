@@ -5,11 +5,13 @@ import HomePage from './pages/HomePage'
 import MealHomePage from './pages/MealHomePage'
 import DrinkHomePage from './pages/DrinkHomePage'
 import DessertHomePage from './pages/DessertHomePage'
+import MealDetailPage from './pages/MealDetailPage';
 
 import AppNav from "./components/AppNav"
 
 import './App.css'
 import axios from 'axios'
+
 
 function App() {
  
@@ -23,6 +25,7 @@ function App() {
         <Routes>
           <Route path='/' element={<HomePage />} />
           <Route path='/Meals' element={<MealHomePage />} />
+          <Route path='/Meals/:mealID' element={<MealDetailPage />} />
           <Route path='/Drinks' element={<DrinkHomePage  />} />
           <Route path='/Desserts' element={<DessertHomePage  />} />
         </Routes>    
