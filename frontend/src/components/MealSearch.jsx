@@ -13,6 +13,7 @@ function MealSearch() {
         console.log(`searching : ${value}`)
         const formVal = value.replaceAll(" ", "%20")
         setSearchTitle(formVal)
+        document.getElementById('searchIn').value=''
     }
     
 
