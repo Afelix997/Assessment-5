@@ -1,7 +1,7 @@
 import Col from 'react-bootstrap/Col';
 import { Link } from 'react-router-dom'
 
-function ArticleTeaser(props) {
+function MealTeaser(props) {
     const dish = props.recipe
     const detail = dish.uri.split('#')
     let mealID = detail[1]
@@ -12,4 +12,4 @@ function ArticleTeaser(props) {
         </Col>
     )
 }
-export default ArticleTeaser;
+export default MealTeaser;
