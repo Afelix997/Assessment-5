@@ -8,10 +8,12 @@ function DessertSearch() {
     const [results, setResults] = useState([])
 
     const handleSubmit = (event) => {
+        event.preventDefault()
         const value = document.getElementById('searchIn').value;
         console.log(`searching : ${value}`)
         const formVal = value.replaceAll(" ", "%20")
         setSearchTitle(formVal)
+        document.getElementById('searchIn').value=''
     }
     
 
