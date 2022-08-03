@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react"
 import axios from 'axios'
-import MealList from "../components/MealList"
+import DessertList from "../components/DessertList"
 
-function MealSearch() {
+function DessertSearch() {
     
     const [searchTitle, setSearchTitle] = useState('')
     const [results, setResults] = useState([])
@@ -17,7 +17,7 @@ function MealSearch() {
 
     async function fetchQ() {
         try {
-            const jsonResponse = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${searchTitle}&app_id=a0645b34&app_key=8176b7b0ab7f60dc31946000a6bc6a98&mealType=Dinner&dishType=Main%20course&imageSize=SMALL&random=true`
+            const jsonResponse = await axios.get(`https://api.edamam.com/api/recipes/v2?type=public&beta=false&q=${searchTitle}%20desserts&app_id=a0645b34&app_key=8176b7b0ab7f60dc31946000a6bc6a98&random=true`
             )
             console.log(jsonResponse.data.hits)
             setResults(jsonResponse.data.hits)
@@ -42,13 +42,14 @@ function MealSearch() {
                 <input id='searchIn' type='text'></input>
                 <input type="submit" value="Submit" />
             </form>
+            <br/>
             <div>
                 {
                     results.length > 0
                         ? <div >
                             <h2>search results</h2>
-                            <hr></hr>
-                            <MealList meals={results} />
+                            <hr/>
+                            <DessertList desserts={results} />
                         </div>
                         : ''
                 }
@@ -58,4 +59,4 @@ function MealSearch() {
 }
 
 
-export default MealSearch
+export default DessertSearch

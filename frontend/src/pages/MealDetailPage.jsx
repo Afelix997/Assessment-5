@@ -1,8 +1,8 @@
 import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import MealDetail from '../components/MealDetail'
-import fetchMealById from '../api/MealAPI'
+import DishDetail from '../components/DishDetail'
+
 
 
 function MealDetailPage() {
@@ -31,7 +31,7 @@ function MealDetailPage() {
     
     return (
         <div>
-            {meal && < MealDetail meal={meal} />} 
+            {meal && < DishDetail meal={meal} />} 
         </div>    
         
     )

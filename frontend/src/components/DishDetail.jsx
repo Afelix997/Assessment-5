@@ -1,17 +1,9 @@
 
 import { useEffect, useState } from "react"
-import IngList from "./IngList"
 
 
-function MealDetail({meal}) {
-    console.log(meal)
-    
-    const [ingList, setIngList] = useState(null)
-    
-    useEffect(() => {
-        setIngList(meal.ingredientLines)
-    }, [])
-    
+
+function DishDetail({meal}) {
    
     return (
         <div>
@@ -23,4 +15,4 @@ function MealDetail({meal}) {
         </div>
         )
 }
-export default MealDetail
+export default DishDetail

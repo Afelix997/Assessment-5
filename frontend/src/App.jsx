@@ -11,6 +11,7 @@ import AppNav from "./components/AppNav"
 
 import './App.css'
 import axios from 'axios'
+import DessertDetailPage from './pages/DessertDetailPage';
 
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
           <Route path='/Meals' element={<MealHomePage />} />
           <Route path='/Meals/:mealID' element={<MealDetailPage />} />
           <Route path='/Drinks' element={<DrinkHomePage  />} />
-          <Route path='/Desserts' element={<DessertHomePage  />} />
+          <Route path='/Desserts' element={<DessertHomePage />} />
+          <Route path='/Desserts/:dessertID' element={<DessertDetailPage />} />
         </Routes>    
     </Router>
     
