@@ -4,7 +4,6 @@ import axios from 'axios'
 import DishDetail from '../components/DishDetail'
 
 
-
 function MealDetailPage() {
     
     let { mealID } = useParams()

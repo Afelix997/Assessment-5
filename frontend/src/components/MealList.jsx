@@ -1,5 +1,6 @@
 import MealTeaser from "./MealTeaser"
 import Row from 'react-bootstrap/Row';
+
 function MealList ({meals}) {
     
 

@@ -1,7 +1,4 @@
 
-import { useEffect, useState } from "react"
-
-
 
 function DishDetail({meal}) {
    
