@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import DrinkList from '../components/DrinkList'
+import DrinkSearch from '../components/DrinkSearch'
 
 function DrinkHomePage() {
     const [drinks,setDrinks] = useState([])
@@ -20,17 +21,21 @@ function DrinkHomePage() {
         }
     }
   
-    function repeatFun(){
-        if(drinks.length<12) getData();
+    function repeatGet(){
+        if(drinks.length<20) getData();
         return 
     }
     useEffect( ()=> {
-        repeatFun()
+        repeatGet()
         
     } , [drinks])
 
     return (
         <div>
+            <DrinkSearch/>
+            <br></br>
+        
+
             <h2>Popular Drinks</h2>
             <hr />
             <DrinkList drinks={drinks} />

@@ -21,8 +21,9 @@ function App() {
   
   return (
     <div className="App">
+      <div className='navTop'>
     <AppNav />
-
+      </div>
     <Router> 
         <Routes>
           <Route path='/' element={<HomePage />} />

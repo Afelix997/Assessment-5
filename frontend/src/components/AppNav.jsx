@@ -5,7 +5,7 @@ function AppNav() {
     
 
     return (
-        <Navbar>
+        <Navbar className='navtop'>
             <Nav>
                <h1>Welcome to Whip Up!</h1>
                
