@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import DishDetail from '../components/DishDetail'
+import AppNav from '../components/AppNav'
 
 
 
@@ -31,6 +32,7 @@ function DessertDetailPage() {
     
     return (
         <div>
+            <AppNav/>
             {dessert && < DishDetail meal={dessert} />} 
         </div>    
         

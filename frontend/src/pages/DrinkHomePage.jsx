@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import DrinkList from '../components/DrinkList'
 import DrinkSearch from '../components/DrinkSearch'
+import AppNav from '../components/AppNav'
 
 function DrinkHomePage() {
     const [drinks,setDrinks] = useState([])
@@ -32,6 +33,7 @@ function DrinkHomePage() {
 
     return (
         <div>
+            <AppNav/>
             <DrinkSearch/>
             <br></br>
         

@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'whip_up',
+    'rest_framework',
 ]
+
+AUTH_USER_MODEL = 'whip_up.AppUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

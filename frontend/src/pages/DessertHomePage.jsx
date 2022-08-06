@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import axios from 'axios'
 import DessertList from '../components/DessertList'
 import DessertSearch from '../components/DessertSearch'
+import AppNav from '../components/AppNav'
 
 
 
@@ -26,7 +27,8 @@ function DessertHomePage() {
     } , [])
     
       return (
-          <div>
+        <div>
+          <AppNav/>
               
               
           <DessertSearch /> 

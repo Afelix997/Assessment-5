@@ -2,6 +2,7 @@ import {useParams} from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import DrinkDetail from '../components/DrinkDetail'
+import AppNav from '../components/AppNav'
 
 
 function DrinkDetailPage() {
@@ -30,6 +31,7 @@ function DrinkDetailPage() {
     console.log('drink:',drink)
     return (
         <div>
+            <AppNav/>
             {drink && < DrinkDetail drink={drink} />} 
         </div>    
         
