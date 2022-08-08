@@ -14,7 +14,8 @@ function AppNav() {
           <Nav className="me-auto">
             <Nav.Link href="#/Meals">Meals</Nav.Link>
                 <Nav.Link href="#/Drinks">Drinks</Nav.Link>
-                <Nav.Link href="#/Desserts">Desserts</Nav.Link>
+              <Nav.Link href="#/Desserts">Desserts</Nav.Link>
+              <Nav.Link href="#/Liked">Saved Dishes</Nav.Link>
             </Nav>
         </Navbar.Collapse>
       </Container>

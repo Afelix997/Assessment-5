@@ -38,7 +38,8 @@ function HomePage({ setUser, user }) {
                 <div>
             <Link to={`/Meals`} >Meals </Link>
             <Link to={`/Drinks`} >Drinks </Link>
-            <Link to={`/Desserts`} >Dessert </Link><br/>
+            <Link to={`/Desserts`} >Dessert </Link>
+            <Link to={`/Liked`} >Saved Dishes </Link> <br />       
                     <Button onClick={submitLogOut}>Log Out!</Button>
             </div>}
         </div>    

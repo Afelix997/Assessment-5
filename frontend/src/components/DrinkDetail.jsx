@@ -1,10 +1,33 @@
+import axios from 'axios'
 
 function DrinkDetail({drink}) {
     
+    const removeLikedItem = (event) => {
+        event.preventDefault();
+        axios.post('removeLiked', {
+            'item': mealID
+            }).then((response) => {
+                console.log('removed Liked Item')
+                console.log('response from server: ', response)
+            })
+    }
+
+    const submitLikedItem = (event) => {
+        event.preventDefault();
+        axios.post('createLiked', {
+            'type': 'drink',
+            'item':  drink.idDrink  
+            }).then((response) => {
+                console.log('Added Liked Item')
+                console.log('response from server: ', response)
+            })
+    }
     
     
     return (
         <div>
+            <button onClick={submitLikedItem}>Add to Likes</button><br/><br/>
+            <button onClick={removeLikedItem}>Remove from Likes</button>
             <h2>{drink.strDrink}</h2>
             <img src={drink.strDrinkThumb} width='200' height='200'></img> 
             <div>

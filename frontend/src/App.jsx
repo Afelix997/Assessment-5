@@ -11,10 +11,12 @@ import DessertHomePage from './pages/DessertHomePage'
 import DessertDetailPage from './pages/DessertDetailPage';
 import SignInPage from './pages/SignInPage';
 import SignUpPage from './pages/SignUpPage';
+import LikedPage from './pages/LikedPage';
 
 import AppNav from "./components/AppNav"
 
 import './App.css'
+
 
 
 
@@ -58,6 +60,7 @@ function App() {
           <Route path='/Drinks/:drinkID' element={<DrinkDetailPage />} />
           <Route path='/Desserts' element={<DessertHomePage />} />
           <Route path='/Desserts/:dessertID' element={<DessertDetailPage />} />
+          <Route path='/Liked' element = {<LikedPage />} />
           
         </Routes>    
     </Router>

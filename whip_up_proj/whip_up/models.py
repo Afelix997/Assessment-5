@@ -14,3 +14,9 @@ class AppUser(AbstractUser):
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [] # Email & Password are required by default.
+
+class SaveList(models.Model):
+    
+    type = models.CharField(max_length=255)
+    searchItem = models.CharField(max_length=300)
+    user = models.ForeignKey(AppUser,on_delete=models.CASCADE)
