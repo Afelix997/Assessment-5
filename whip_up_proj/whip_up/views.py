@@ -127,3 +127,15 @@ def getLiked(request):
         return JsonResponse({'meals':likedMealList,'desserts':likedDessertList,'drinks':likedDrinkList})
     else:
         return JsonResponse({'user':None})
+        
+@api_view(['POST'])
+def checkLiked(request):
+    if request.user.is_authenticated:
+        user = User.objects.get(id=request.user.id)
+        userObjects = SaveList.objects.filter(user_id=user)
+        if userObjects.filter(searchItem=request.data['item']).exists():
+            return HttpResponse(True)
+        else:
+            return HttpResponse(False)
+    else:
+        return JsonResponse({'user':None})

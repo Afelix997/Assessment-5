@@ -51,7 +51,7 @@ function DrinkSearch() {
                 {
                     results.length > 0
                         ? <div >
-                            <h2>search results</h2>
+                            <h2>'{searchTitle }' search results</h2>
                             <hr/>
                             <DrinkList drinks={results} />
                         </div>

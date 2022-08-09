@@ -1,11 +1,30 @@
 import axios from 'axios'
+import { useState, useEffect } from "react"
 
 function DrinkDetail({drink}) {
     
+    const [buttonSwitch, SetButtonSwitch] = useState(false)
+
+    const checkLikedItem = () => {
+        axios.post('checkLiked', {
+            'item': drink.idDrink
+        })
+            .then((response) => {
+                console.log('response from server: ', response)
+                response.data=='True'? SetButtonSwitch(true):SetButtonSwitch(false)
+                
+            })
+    }
+
+    useEffect(() => {
+        checkLikedItem()
+    }, [])
+
     const removeLikedItem = (event) => {
         event.preventDefault();
+        SetButtonSwitch(false)
         axios.post('removeLiked', {
-            'item': mealID
+            'item': drink.idDrink
             }).then((response) => {
                 console.log('removed Liked Item')
                 console.log('response from server: ', response)
@@ -14,6 +33,7 @@ function DrinkDetail({drink}) {
 
     const submitLikedItem = (event) => {
         event.preventDefault();
+        SetButtonSwitch(true)
         axios.post('createLiked', {
             'type': 'drink',
             'item':  drink.idDrink  
@@ -26,8 +46,8 @@ function DrinkDetail({drink}) {
     
     return (
         <div>
-            <button onClick={submitLikedItem}>Add to Likes</button><br/><br/>
-            <button onClick={removeLikedItem}>Remove from Likes</button>
+            <div> {buttonSwitch==false?<button onClick={submitLikedItem}>Add to Likes</button>:
+                <button onClick={removeLikedItem}>Remove from Likes</button>}</div>
             <h2>{drink.strDrink}</h2>
             <img src={drink.strDrinkThumb} width='200' height='200'></img> 
             <div>

@@ -10,4 +10,5 @@ urlpatterns = [
     path('getLiked', views.getLiked),
     path('createLiked', views.createLiked),
     path('removeLiked', views.removeLiked),
+    path('checkLiked', views.checkLiked),
 ]
