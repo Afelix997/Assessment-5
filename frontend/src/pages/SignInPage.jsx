@@ -48,8 +48,8 @@ function SignInPage({ setUser,user }) {
     }, [])
     // console.log(user)
     return (
-        < div >
-            <h1>Welcome To Whip Up!</h1>
+        < div className='LogBody'>
+            <h1 className='LogMain'>Welcome To Whip Up!</h1>
             {user != null && user != undefined && user != 'undefined' ?
                 nav('/Home') :
                 <div>
@@ -70,7 +70,7 @@ function SignInPage({ setUser,user }) {
                     Login
                 </Button>
             </Form>
-            <Link to='/signup'>No account? Sign up here</Link>
+            <Link to='/signup'>No account? Sign up Here!</Link>
             
             </div>}
         </div >    

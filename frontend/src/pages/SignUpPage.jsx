@@ -22,16 +22,13 @@ function SignUpPage (){
     }
 
     return(
-        <div>
-            <h1>Welcome To Whip Up!</h1>
-            <h3>Sign Up</h3>
+        <div className='LogBody'>
+            <h1 className='LogMain'>Welcome To Whip Up!</h1>
+            <h3 className='LogBody'>Create An Account</h3><br/>
             <Form onSubmit={submitSignUp}>
                 <Form.Group className="mb-3" controlId="formEmail" >
-                    <Form.Label>Email address</Form.Label>
+                    <Form.Label>Email Address</Form.Label>
                     <Form.Control type="email" placeholder="Enter email" />
-                    <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                    </Form.Text>
                 </Form.Group>
 
                 <Form.Group className="mb-3" controlId="formPassword">
@@ -42,7 +39,7 @@ function SignUpPage (){
                     Submit
                 </Button>
             </Form>
-            <p><Link to='/'>Log In</Link></p>
+            <p ><Link to='/'>Log In</Link></p>
         </div>
     )
 }

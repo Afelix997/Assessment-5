@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import axios from 'axios'
 
+
 import HomePage from './pages/HomePage'
 import MealHomePage from './pages/MealHomePage'
 import MealDetailPage from './pages/MealDetailPage';
@@ -46,9 +47,6 @@ function App() {
   
   return (
     <div className="App">
-      <div className='navTop'>
-    {/* <AppNav /> */}
-      </div>
     <Router> 
         <Routes>
           <Route path='/' element={< SignInPage user={user} setUser={setUser} />} />

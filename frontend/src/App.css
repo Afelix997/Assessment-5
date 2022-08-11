@@ -1,42 +1,95 @@
+@font-face {
+  font-family: 'croissant_oneregular';
+  src: url('fonts/croissant/croissant-one.regular-webfont.woff2') format('woff2'),
+       url('fonts/croissant/croissant-one.regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+@font-face {
+  font-family: 'klarissa_contourregular';
+  src: url('fonts/threePack/klarissa.contour-webfont.woff2') format('woff2'),
+       url('fonts/threePack/klarissa.contour-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'klarissaregular';
+  src: url('fonts/threePack/klarissa.regular-webfont.woff2') format('woff2'),
+       url('fonts/threePack/klarissa.regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'zabatana_postpostercompressed';
+  src: url('fonts/threePack/zabatana-poster.poster-compressed-webfont.woff2') format('woff2'),
+       url('fonts/threePack/zabatana-poster.poster-compressed-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+a.nav-link{
+  padding-left: 40px;
+  word-spacing: -20px;
+}
+
+.container-fluid{
+  margin:   0 auto;
+}
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
+  justify-content: center;
+  max-width: 1780px;
+  margin:   0 auto;
   padding: 2rem;
   text-align: center;
 
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
+.App{
+  
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.form-control{
+  margin:   0 auto;
+  max-width: 680px;
+  font-size: 4rem;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.LogBody{
+  font-family: 'zabatana_postpostercompressed';
+  font-size: 40px;
+  
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h3.LogBody{
+  font-family: 'zabatana_postpostercompressed';
+  font-size: 80px;
+  
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.NavMain{
+  font-family: 'croissant_oneregular';
+  font-size: 6.4rem;
 }
 
-.card {
-  padding: 2em;
+h1.LogMain {
+font-family: 'croissant_oneregular';
+padding: 100px;
+font-size: 5.4rem;
+color: black;
+}
+.NavEle{
+  font-family: 'klarissaregular';
+  font-size: 3.4rem;
+  
 }
 
-.read-the-docs {
-  color: #888;
-}
